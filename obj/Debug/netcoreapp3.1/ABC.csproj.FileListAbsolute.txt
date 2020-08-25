@@ -1,0 +1,12 @@
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/obj/Debug/netcoreapp3.1/ABC.csprojAssemblyReference.cache
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/obj/Debug/netcoreapp3.1/ABC.AssemblyInfoInputs.cache
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/obj/Debug/netcoreapp3.1/ABC.AssemblyInfo.cs
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/obj/Debug/netcoreapp3.1/ABC.csproj.CoreCompileInputs.cache
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/bin/Debug/netcoreapp3.1/ABC.deps.json
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/bin/Debug/netcoreapp3.1/ABC.runtimeconfig.json
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/bin/Debug/netcoreapp3.1/ABC.runtimeconfig.dev.json
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/bin/Debug/netcoreapp3.1/ABC.dll
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/bin/Debug/netcoreapp3.1/ABC.pdb
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/obj/Debug/netcoreapp3.1/ABC.dll
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/obj/Debug/netcoreapp3.1/ABC.pdb
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Foundational/ABC/obj/Debug/netcoreapp3.1/ABC.genruntimeconfig.cache
