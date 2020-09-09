@@ -16,67 +16,60 @@ namespace ABC
             can_make_word("CONFUSE");
         }
 
-        static char[][] blockCollection = {
-            new char[] {'B','O'},
-            new char[] {'X','K'},
-            new char[] {'D','Q'},
-            new char[] {'C','P'},
-            new char[] {'N','A'},
-            new char[] {'G','T'},
-            new char[] {'R','E'},
-            new char[] {'T','G'},
-            new char[] {'Q','D'},
-            new char[] {'F','S'},
-            new char[] {'J','W'},
-            new char[] {'H','U'},
-            new char[] {'V','I'},
-            new char[] {'A','N'},
-            new char[] {'O','B'},
-            new char[] {'E','R'},
-            new char[] {'F','S'},
-            new char[] {'L','Y'},
-            new char[] {'P','C'},
-            new char[] {'Z','M'}
-        };
+
+        private static LetterBlockCollection blockCollection = new LetterBlockCollection();
         
         private static void can_make_word(string word)
         {
             List<int> blockTracker = new List<int>();
+            AssessEachLetterInWord(word, blockTracker);
+            DisplayResult(word, blockTracker);
+        }
 
+        private static void AssessEachLetterInWord(string word, List<int> blockTracker)
+        {
             foreach( char letter in word)
             {
-                bool letterFound = false;
-            
-                for(int i = 0; i < blockCollection.Length; i++)
+                AssessLetterAgainstBlockCollection(letter, blockTracker);
+            }
+        }
+
+        private static void AssessLetterAgainstBlockCollection(char letter, List<int> blockTracker)
+        {
+            bool letterIsFound = false;
+            for(int i = 0; i < blockCollection.Collection.Count; i++)
+            {
+                for(int j = 0; j < blockCollection.Collection[i].Length; j++)
                 {
-                    for(int j = 0; j < blockCollection[i].Length; j++)
+                    letterIsFound = IsLetterInLetterBlock(letter, blockCollection.Collection[i].Letters[j], i, blockTracker);
+                    if (letterIsFound)
                     {
-                        letterFound = assessLetter(letter, blockCollection[i][j], i, blockTracker);
-                        if (letterFound == true)
-                        {
-                            break;
-                        }
-                    }
-                    if (letterFound == true)
-                    {
+                        AddBlockPositionToTracker(i, blockTracker);
                         break;
                     }
                 }
+                if (letterIsFound) break;
             }
-            Console.WriteLine(word.Length == blockTracker.Count);
         }
 
-        private static bool assessLetter(char letter, char blockLetter, int blockPosition, List<int> blockTracker)
+        private static void CheckAgainstEachBlockLetter()
         {
-            if(letter == blockLetter && !blockTracker.Contains(blockPosition))
-            {
-                blockTracker.Add(blockPosition);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            
+        }
+
+        private static bool IsLetterInLetterBlock(char letter, char blockLetter, int blockPosition, List<int> blockTracker)
+        {
+            return (letter == blockLetter && !blockTracker.Contains(blockPosition)) ? true : false;
+        }
+
+        private static void AddBlockPositionToTracker(int blockPosition, List<int> blockTracker)
+        {
+            blockTracker.Add(blockPosition);
+        }
+
+        private static void DisplayResult(string word, List<int> blockTracker)
+        {
+            Console.WriteLine(word.Length == blockTracker.Count);
         }
     }
 }
